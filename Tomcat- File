@@ -1,0 +1,29 @@
+  1. pwd
+2.hostnamectl set-hostname Siddiq     (set-up the hostname )
+3.sduo su -              (or) exit then sudo -i              (switching to the user )
+4.dnf install java -y     (tomcat need java )
+5. wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.122/bin/apache-tomcat-9.0.122.tar.gz
+6.tar -xvf apache-tomcat-9.0.122.tar.gz   (untar )
+7.ll     
+8.cd apache-tomcat-9.0.122/     
+9. cd webapps
+10.cd manager 
+11.cd META-INF/
+12.vim context.xml    (removed there roles two line's)
+13.cd ../../../
+14. cd conf/
+  <role rolename="manager-gui"/>                                               ------> add three roles inside the </tomcat-users>
+  <role rolename="manager-script"/>
+  <user username="tomcat" password="siddiq" roles="manager-gui,manager-script"/>   
+</tomcat-users>
+:wq
+15.cd ../../
+16.cd bin/
+17. ./startup.sh
+  Tomcat started.         ---------->{ tomcat port-number is :8080}
+
+
+
+
+
+
