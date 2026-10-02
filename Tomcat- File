@@ -9,7 +9,10 @@
 9. cd webapps
 10.cd manager 
 11.cd META-INF/
-12.vim context.xml    (removed there roles two line's)
+12.vim context.xml    (removed there two values line's)
+# <Valve className="org.apache.catalina.valves.RemoteCIDRValve"
+  #       allow="127.0.0.0/8,::1/128" />
+
 13.cd ../../../
 14. cd conf/
   <role rolename="manager-gui"/>                                               ------> add three roles inside the </tomcat-users>
